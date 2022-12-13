@@ -1,11 +1,12 @@
 import { createBrowserRouter } from "react-router-dom";
-import Layout from "../layout";
+import Layout from "../Layout";
+import { Preview } from "../component/preview";
 
 const router = createBrowserRouter([
     {
         path: '/',
         element: <Layout />,
-        children: []
+        children: [{ index: true, element: <Preview /> }]
     }
 ])
 

@@ -4,9 +4,9 @@ import Style from './Style.module.less'
 const Layout = () => {
     return (
         <div className={Style.cj}>
-            <header></header>
+            <header className={Style.header}></header>
             <Outlet />
-            <footer></footer>
+            <footer className={Style.footer}></footer>
         </div>
     )
 
