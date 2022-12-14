@@ -3,6 +3,7 @@ import Style from './Style.module.less'
 import { InfoTitle } from '../InfoTitle'
 import { EnvIconList } from '../chlidren/EnvIconList'
 import { DeviceInfo } from '../chlidren/DeviceInfo'
+import { RunningParams } from '../chlidren/RunningParams'
 
 import ws from '../../assets/imgs/瓦斯.png'
 import sd from '../../assets/imgs/湿度.png'
@@ -43,6 +44,15 @@ export const Preview = () => {
         { name: '滚筒转速', val: 40, icon: slv, bg: bgslv, unit: 'r/min' },
         { name: '推进速度', val: 4.5, icon: slan, bg: bgslan, unit: 'm/h' },
     ])
+
+    const [runningP, setRunningP] = useState([
+        { name: "液压油位", val: 70, unit: "", percentage: true },
+        { name: "液压油温", val: 50, unit: "°C" },
+        { name: "冷却水压", val: 30, unit: "bar" },
+        { name: "齿轮油位", val: 50, unit: "", percentage: true },
+        { name: "齿轮油温", val: 20, unit: "°C" },
+        { name: "喷雾水压", val: 20, unit: "bar" },
+    ])
     return (
         <section id={Style.main} className='page'>
             <div className={Style.leftContent}>
@@ -56,6 +66,7 @@ export const Preview = () => {
                 </div>
                 <div className={Style.leftItem}>
                     <InfoTitle title='运行参数' />
+                    <RunningParams list={runningP} />
                 </div>
             </div>
             <div className={Style.middle}></div>
