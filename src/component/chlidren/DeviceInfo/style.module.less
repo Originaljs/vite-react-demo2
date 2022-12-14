@@ -1,0 +1,53 @@
+.deviceBox {
+    display: flex;
+    justify-content: space-around;
+    gap: 5px 0;
+    padding: 5px 0 22px;
+    // text-align: center;
+    // position: relative;
+    flex-wrap: wrap-reverse;
+
+    .deviceItem {
+        // display: flex;
+        // flex-direction: column;
+        position: relative;
+        text-align: center;
+
+        .textbox {
+            position: absolute;
+            left: 0;
+            top: 20px;
+            width: 100%;
+            font-size: var(--mid-size);
+            font-weight: bold;
+            margin-top: 30px;
+        }
+
+        .name {
+            font-size: var(--small-size);
+            width: 90px;
+            height: 25px;
+            line-height: 25px;
+            text-align: center;
+        }
+
+        .val {
+
+            width: 100%;
+            font-size: var(--mid-size);
+            font-weight: bold;
+            margin-top: 30px;
+        }
+
+        .unit {
+            font-size: var(--small-size);
+        }
+
+        .icon {
+            margin-top: 10px;
+            display: inline-block;
+        }
+    }
+
+
+}
