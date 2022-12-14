@@ -1,0 +1,59 @@
+.rightInfo {
+    display: flex;
+    flex-direction: row;
+    margin-top: 29px;
+    justify-content: space-between;
+
+    .listItem {
+        display: flex;
+        flex-direction: column;
+
+        .runparamsitem {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 22px 0 13px;
+            width: 206px;
+            height: 36px;
+            background: url("../../../assets/imgs/矩形 2661 拷贝 18.png")no-repeat;
+
+            .statusname {
+                overflow: hidden;
+                color: var(--icon-color);
+
+                & .green {
+                    --icon-color: var(--green);
+                    --icon-color-b: rgba(60, 255, 0, .5);
+                }
+
+                & .blue {
+                    --icon-color: var(--blue);
+                    --icon-color-b: rgba(43, 204, 255, .5);
+                }
+            }
+
+            .statusname .green {
+                --icon-color: var(--green);
+                --icon-color-b: rgba(60, 255, 0, .5);
+            }
+
+            .statusname .blue {
+                --icon-color: var(--blue);
+                --icon-color-b: rgba(43, 204, 255, .5);
+            }
+
+            .statusname::before {
+                content: "";
+                position: relative;
+                top: 2px;
+                width: 14px;
+                height: 14px;
+                display: inline-block;
+                background: radial-gradient(var(--icon-color) 0%, var(--icon-color) 50%, transparent 50%, transparent 100%) center/12px 12px no-repeat;
+                background-color: var(--icon-color-b);
+                border-radius: 14px;
+                margin-right: 6px;
+            }
+        }
+    }
+}
