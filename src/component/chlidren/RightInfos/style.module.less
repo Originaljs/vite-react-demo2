@@ -20,27 +20,9 @@
             .statusname {
                 overflow: hidden;
                 color: var(--icon-color);
-
-                & .green {
-                    --icon-color: var(--green);
-                    --icon-color-b: rgba(60, 255, 0, .5);
-                }
-
-                & .blue {
-                    --icon-color: var(--blue);
-                    --icon-color-b: rgba(43, 204, 255, .5);
-                }
             }
 
-            .statusname .green {
-                --icon-color: var(--green);
-                --icon-color-b: rgba(60, 255, 0, .5);
-            }
 
-            .statusname .blue {
-                --icon-color: var(--blue);
-                --icon-color-b: rgba(43, 204, 255, .5);
-            }
 
             .statusname::before {
                 content: "";
@@ -56,4 +38,46 @@
             }
         }
     }
+
+    .errorinfolist {
+        box-sizing: border-box;
+        text-align: center;
+        margin: auto;
+        margin-top: 15px;
+        width: 194px;
+        height: 300px;
+        overflow-y: auto;
+        background: url("../../../assets/imgs/矩形 2661 拷贝 18(1).png");
+
+        .errorInfo {
+            line-height: 1.5;
+            color: #C90378;
+        }
+    }
+
+    .errorinfolist::-webkit-scrollbar-thumb {
+        width: 1px;
+    }
+
+    .errorinfolist::-webkit-scrollbar-track {
+        width: 1px;
+    }
+
+    .errorinfolist::-webkit-scrollbar-button {
+        width: 1px;
+    }
+
+    .errorinfolist::-webkit-scrollbar {
+        width: 1px;
+    }
+}
+
+.green {
+    --icon-color: var(--green);
+    --icon-color-b: rgba(60, 255, 0, .5);
+}
+
+.blue {
+    --icon-color: var(--blue);
+    --icon-color-b: rgba(43, 204, 255, .5);
 }
